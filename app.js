@@ -1,4 +1,4 @@
 (function(){
-  var app = angular.module('form', []);
+  var app = angular.module('talklyceum', []);
 
 })();

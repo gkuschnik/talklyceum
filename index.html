@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="form">
+<html ng-app="talklyceum">
   <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
   </head>
+
   <body>
+    <div class="start">
+      <h1>TO START...</h1>
+      <h2>we need your full name</h2>
+      <div class="options">
+        <ul>
+          <li>
+            <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="first_name" required="" ng-model="profileData.first_name" placeholder="First Name">
+          </li>
+          <li>
+            <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="last_name" required="" ng-model="profileData.last_name" placeholder="Last Name">
+          </li>
+        </ul>
+      </div>
+    </div>
 
 
 
