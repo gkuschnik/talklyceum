@@ -6,9 +6,15 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  margin-top: 0;
   margin: auto;
   max-width: 100%;
   text-align: center;
+}
+
+a {
+  color: rgb(179,139,32);
+  text-decoration: underline;
 }
 
 h1 {
@@ -29,6 +35,16 @@ h2 {
   color: black;
 }
 
+.header {
+  background-color: white;
+  background-image: url('../../images/lyceum_01.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  height: 460px;
+}
+
 .fields {
   width: 80%;
   text-align: center;
@@ -37,10 +53,11 @@ h2 {
 }
 
 .start {
-  text-align: center;
-  margin-top: 100px;
   background-color: white;
+  height: 100%;
+  width: 100%;
   padding: 50px;
+  text-align: center;
 }
 .potentialEmployers {
   margin-top: 95px;
@@ -48,6 +65,8 @@ h2 {
 
 .education {
   background-color: rgb(139,27,29);
+  height: 100%;
+  width: 100%;
   padding: 50px;
 }
 .education h1 {
@@ -64,6 +83,21 @@ h2 {
   padding: 50px;
 }
 
+.fieldValid {
+  border: 1px solid #00ff00;
+}
+.fieldInvalid {
+  border: 1px solid #ff0000;
+}
+
+.my-form {
+  transition:0.5s linear all;
+  background: white;
+}
+.ng-invalid {
+  background: red;
+  color:white;
+}
 
 /*Radio Button Styling*/
 input[type="radio"], input[type="checkbox"] {
@@ -89,4 +123,23 @@ input[type="radio"]:checked + span {
 .radioSelect {
   margin-bottom: 45px;
   margin-top: 25px;
+}
+
+.form-control {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }

@@ -11,7 +11,9 @@
 
   <body ng-app="talk">
     <div ng-controller="FormController">
-      <form>
+      <div class="header">
+      </div>
+      <form name="myFormNg" ng-submit="myForm.submitTheForm()">
         <div class="start">
         <h1>TO START...</h1>
         <h2>we need your full name</h2>
@@ -26,7 +28,7 @@
           <h2 class="potentialEmployers">and how potential employers can contact you</h2>
           <div class="fields">
             <div class="col-md-6 form-group">
-              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="text" name="email" ng-model="myForm.email" placeholder="Email Address">
+              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="email" name="email" ng-model="myForm.email" placeholder="Email Address">
             </div>
             <div class="col-md-6 form-group">
               <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="phoneNumber"  ng-model="myForm.phoneNumber" placeholder="Phone Number">
@@ -63,6 +65,18 @@
           </div>
         </div>
 
+        <div class="legalSection">
+          <h1>LET'S NOT FORGET THE LEGAL STUFF...</h1>
+          <h2>Please read and agree to our <a href="">terms & conditions</a>.</h2>
+          <div class="radioSelect">
+            <label class="termsConditions">
+              <input type="radio" name="termsConditions" ng-model="myForm.termsConditions" ng-options="obj.id as obj.name for obj in myForm.temsConditions" value="termsConditions">
+              <span>I AGREE TO THE ABOVE TERMS AND CONDITIONS</span>
+            </label>
+          </div>
+        </div>
+
+        <input type="submit" value="Submit" />
       </form>
     </div>
 

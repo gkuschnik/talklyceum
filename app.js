@@ -10,13 +10,25 @@
 // })();
 
 
-angular.module("talk", [])
-  .controller("FormController", function($scope) {
-    $scope.myForm = {};
+var app = angular.module("talk", [])
+  app.controller("FormController", function($scope, $http) {
+    var formData = {
+      firstName: "default",
+      lastName: "default",
+      email: "default",
+      phoneNumber: "default",
+      degree: "default",
+      options: "default",
+      temsConditions: "default",
+    };
 
-    $scope.myForm.options = [
-      { id : "bpo", name: "Buisness Process Outsourcing" }
-     ,{ id : "hrm", name: "Hotel & Restaurant Management" }
-     ,{ id : "other", name: "Other" }
-     ];
-  });
+    $scope.save = function() {
+      formData= $scope.myForm;
+    };
+
+    $scope.submitForm = function() {
+      console.log("posting data....");
+      formData = $scope.form;
+      console.log(formData);
+    };
+});
