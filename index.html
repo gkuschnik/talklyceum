@@ -1,26 +1,69 @@
 <!DOCTYPE html>
-<html ng-app="talklyceum">
+<html>
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="jquery.css">
+    <link rel="stylesheet" type="text/css" href="layout.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
   </head>
 
-  <body>
-    <div class="start">
-      <h1>TO START...</h1>
-      <h2>we need your full name</h2>
-      <div class="options">
-        <ul>
-          <li>
-            <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="first_name" required="" ng-model="profileData.first_name" placeholder="First Name">
-          </li>
-          <li>
-            <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="last_name" required="" ng-model="profileData.last_name" placeholder="Last Name">
-          </li>
-        </ul>
-      </div>
+  <body ng-app="talk">
+    <div ng-controller="FormController">
+      <form>
+        <div class="start">
+        <h1>TO START...</h1>
+        <h2>we need your full name</h2>
+          <div class="fields">
+            <div class="col-md-6 form-group">
+              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="text" name="firstName" ng-model="myForm.firstName" placeholder="First Name">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="lastName"  ng-model="myForm.lastName" placeholder="Last Name">
+            </div>
+          </div>
+          <h2 class="potentialEmployers">and how potential employers can contact you</h2>
+          <div class="fields">
+            <div class="col-md-6 form-group">
+              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="text" name="email" ng-model="myForm.email" placeholder="Email Address">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="phoneNumber"  ng-model="myForm.phoneNumber" placeholder="Phone Number">
+            </div>
+          </div>
+        </div>
+
+        <div class="education">
+          <h1>NOW FOR YOUR EDUCATION...</h1>
+          <h2>I'm majoring in</h2>
+          <div class="degree">
+            <input type="text" class="form-group form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="degree" ng-model="myForm.degree" placeholder="Degree (Specialisation)"> <br/>
+          </div>
+        </div>
+
+        <div class="dreamjob">
+          <h1>AND MOST IMPORTANTLY... DREAM JOB!</h1>
+          <h2>I'd like to work for</h2>
+          <div class="radioSelect">
+            <label class="bpo">
+              <input type="radio" name="dreamJob" ng-model="myForm.job" ng-options="obj.id as obj.name for obj in myForm.options" value="BPO">
+              <span>Business Process Outsourcing (BPO)</span>
+            </label>
+            <label class="hrm">
+              <input type="radio" name="dreamJob" ng-model="myForm.job" ng-options="obj.id as obj.name for obj in myForm.options" value="HRM">
+              <span>Hotel & Restaurant Management (HRM)</span>
+            </label>
+          </div>
+          <div class="radioSelect">
+            <label class="other">
+              <input type="radio" name="dreamJob" ng-model="myForm.job" ng-options="obj.id as obj.name for obj in myForm.options" value="Other">
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
+
+      </form>
     </div>
 
 
@@ -28,7 +71,11 @@
 
 
 
-    <button>Submit</button>
+
+
+
+
+
 
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>

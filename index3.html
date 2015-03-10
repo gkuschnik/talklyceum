@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="talklyceum">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="jquery.css">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <div class="start">
+      <h1>TO START...</h1>
+      <h2>we need your full name</h2>
+        <div class="row fields">
+          <div class="col-md-6 form-group" ng-class="{'has-error': errorIf(!signupForm.first_name.$valid)}">
+            <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" placeholder="First name" name="first_name" required="" ng-model="userData.first_name">
+          </div>
+          <div class="col-md-6 form-group" ng-class="{'has-error': errorIf(!signupForm.last_name.$valid)}">
+            <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" placeholder="Last name" name="last_name" required="" ng-model="userData.last_name">
+          </div>
+        </div>
+    </div>
+
+    <div class="education">
+      <h1>NOW FOR YOUR EDUCATION...</h1>
+      <h2>I'm majoring in</h2>
+        <div class="row fields">
+          <div class="col-md-6 form-group" ng-class="{'has-error': errorIf(!signupForm.education.$valid)}">
+            <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" placeholder="Degree (Specialisation)" name="education" required="" ng-model="userData.education">
+          </div>
+        </div>
+    </div>
+
+    <div class="dreamjob" ng-controller="RadioController as RadioCtrl">
+      <h1>AND MOST IMPORTANTLY... DREAM JOB!</h1>
+      <h2>I'd like to work for</h2>
+        <div class="radio">
+          <label>
+          <span></span>
+            <input class="checkedClass" type="radio" name="dreamJob" value="bpo" ng-model="formData.dreamJob">
+            Business Process Outsourcing (BPO)
+          <span></span>
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input class="checkedClass" type="radio" name="dreamJob" value="hrm" ng-model="formData.dreamJob">
+            Hotel & Restaurant Management (HRM)
+          </label>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
