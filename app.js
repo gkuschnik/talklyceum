@@ -1,15 +1,3 @@
-// $('input:radio').click(function(){
-//     $('label#' + $(this).attr('id')).toggleClass('checkedClass'); // checkedClass is defined in your CSS
-// });
-
-// (function(){
-//   var app = angular.module('talklyceum', []);
-
-
-//   }]);
-// })();
-
-
 var app = angular.module("talk", [])
   app.controller("FormController", function($scope, $http) {
     var formData = {
