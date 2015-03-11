@@ -19,19 +19,19 @@
         <h2>we need your full name</h2>
           <div class="fields">
             <div class="col-md-6 form-group">
-              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="text" name="firstName" ng-model="myForm.firstName" placeholder="First Name">
+              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="text" name="firstName" ng-model="myForm.firstName" placeholder="First Name" required>
             </div>
             <div class="col-md-6 form-group">
-              <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="lastName"  ng-model="myForm.lastName" placeholder="Last Name">
+              <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="lastName"  ng-model="myForm.lastName" placeholder="Last Name" required>
             </div>
           </div>
           <h2 class="potentialEmployers">and how potential employers can contact you</h2>
           <div class="fields">
             <div class="col-md-6 form-group">
-              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="email" name="email" ng-model="myForm.email" placeholder="Email Address">
+              <input class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" type="email" name="email" ng-model="myForm.email" placeholder="Email Address" required>
             </div>
             <div class="col-md-6 form-group">
-              <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="phoneNumber"  ng-model="myForm.phoneNumber" placeholder="Phone Number">
+              <input type="text" class="form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="phoneNumber"  ng-model="myForm.phoneNumber" placeholder="Phone Number" required>
             </div>
           </div>
         </div>
@@ -40,14 +40,14 @@
           <h1>NOW FOR YOUR EDUCATION...</h1>
           <h2>I'm majoring in</h2>
           <div class="degree">
-            <input type="text" class="form-group form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="degree" ng-model="myForm.degree" placeholder="Degree (Specialisation)"> <br/>
+            <input type="text" class="form-group form-control form-control-lg ng-pristine ng-invalid ng-invalid-required" name="degree" ng-model="myForm.degree" placeholder="Degree (Specialisation)" required> <br/>
           </div>
         </div>
 
         <div class="dreamjob">
           <h1>AND MOST IMPORTANTLY... DREAM JOB!</h1>
           <h2>I'd like to work for</h2>
-          <div class="radioSelect">
+          <div class="radioSelect" required>
             <label class="bpo">
               <input type="radio" name="dreamJob" ng-model="myForm.job" ng-options="obj.id as obj.name for obj in myForm.options" value="BPO">
               <span>Business Process Outsourcing (BPO)</span>
@@ -70,24 +70,29 @@
           <h2>Please read and agree to our <a href="">terms & conditions</a>.</h2>
           <div class="radioSelect">
             <label class="termsConditions">
-              <input type="radio" name="termsConditions" ng-model="myForm.termsConditions" ng-options="obj.id as obj.name for obj in myForm.temsConditions" value="termsConditions">
+              <input type="radio" name="termsConditions" ng-model="myForm.termsConditions" ng-options="obj.id as obj.name for obj in myForm.temsConditions" value="termsConditions" required>
               <span>I AGREE TO THE ABOVE TERMS AND CONDITIONS</span>
             </label>
           </div>
         </div>
 
-        <input type="submit" value="Submit" />
+        <input class="button" type="submit" value="SUBMIT" />
       </form>
+
     </div>
 
     <div class="footer">
       <div class="logos">
-        <img src="">
+        <a href="http://www.lpu.edu.ph/"><img class="lyceumLogo" src="http://upload.wikimedia.org/wikipedia/en/1/1e/Seal_of_Lyceum_of_the_Philippines_University.svg" href=""></a>
+        <a href="http://www.talkpush.com"><img class="talkpushLogo" src="http://www.talkpush.com/wp-content/uploads/2014/12/logo-website-01.png"></a>
       </div>
+
       <div class="socialMedia">
-        <img src="">
-        <img src="">
-        <img src="">
+        <a href="https://www.facebook.com/letthetalenttalk"><img class="facebook" src="../../images/facebook-128.png" style="max-width: 60px;"></a>
+
+        <a href="https://twitter.com/Talkpush"><img class="twitter" src="../../images/twitter-128.png" style="max-width: 60px;"></a>
+
+        <a href="https://www.linkedin.com/company/talkpush"><img class="linkedin" src="../../images/linkedin-128.png" style="max-width: 60px;"></a>
       </div>
     </div>
 
